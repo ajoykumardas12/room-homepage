@@ -545,6 +545,14 @@ video {
   transform-origin: bottom left;
 }
 
+.slide{
+  opacity: 0;
+}
+
+.slide[data-active]{
+  opacity: 1;
+}
+
 .absolute {
   position: absolute;
 }
@@ -575,6 +583,26 @@ video {
 
 .h-3 {
   height: 0.75rem;
+}
+
+.h-24 {
+  height: 6rem;
+}
+
+.h-40 {
+  height: 10rem;
+}
+
+.h-\[40rem\] {
+  height: 40rem;
+}
+
+.h-\[35rem\] {
+  height: 35rem;
+}
+
+.h-\[33rem\] {
+  height: 33rem;
 }
 
 .w-3 {
@@ -611,18 +639,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-\[30\.5\%\] {
-  width: 30.5%;
-}
-
-.w-\[30\.6\%\] {
-  width: 30.6%;
-}
-
-.w-\[30\.8\%\] {
-  width: 30.8%;
 }
 
 .cursor-pointer {

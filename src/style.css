@@ -23,4 +23,11 @@
         transform: scaleX(1);
         transform-origin: bottom left;
     }
+
+    .slide{
+        opacity: 0;
+    }
+    .slide[data-active]{
+        opacity: 1;
+    }
 }
