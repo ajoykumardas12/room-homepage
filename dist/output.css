@@ -522,6 +522,10 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.table {
+  display: table;
+}
+
 .font-leagueSpartan {
   font-family: League Spartan;
 }
