@@ -15,14 +15,14 @@
 
 </head>
 <body class="font-leagueSpartan relative">
-    <header class="absolute z-10 w-full py-10 lg:py-12 p-12 flex items-center gap-14 text-white justify-center lg:justify-start">
-        <button class="absolute left-10 lg:hidden" onclick="openNav()">
+    <header class="absolute z-10 w-full py-10 md:py-12 p-12 flex items-center gap-14 text-white justify-center md:justify-start">
+        <button class="absolute left-10 md:hidden" onclick="openNav()">
             <img src="/images/icon-hamburger.svg" alt="">
         </button>
         <div>
             <img src="/images/logo.svg" alt="">
         </div>
-        <nav class="hidden lg:block w-full text-lg">
+        <nav class="hidden md:block w-full text-lg">
             <ul class="flex gap-6">
                 <li class="list-none"><a href="#" class="navlink">home</a></li>
                 <li class="list-none"><a href="#" class="navlink">shop</a></li>
@@ -30,7 +30,7 @@
                 <li class="list-none"><a href="#" class="navlink">contact</a></li>
             </ul>
         </nav>
-        <nav class="fixed top-0 lg:hidden w-full hidden" id="mobile-nav">
+        <nav class="fixed top-0 md:hidden w-full hidden" id="mobile-nav">
             <div class="fixed w-full h-[100rem] backdrop-brightness-[0.4]">
                 <div class="z-20 top-0 left-0 w-full h-24 flex items-center gap-8 xs:gap-10 px-6 xs:px-10 bg-white text-lg">
                     <button onclick="closeNav()">
@@ -47,18 +47,18 @@
         </nav>
     </header>
     <main class="">
-        <div class="w-full flex flex-col lg:flex-row">
-            <div class=" lg:w-7/12 relative">
+        <div class="w-full flex flex-col desktop:flex-row">
+            <div class="w-full desktop:w-7/12 relative">
                 <div>
                     <img 
                         src="/images/desktop-image-hero-1.jpg" alt="home table"
-                        class=""
+                        class="w-full"
                         id="hero-img"
                     >
                 </div>
-                <div class="w-[19.4%] absolute bottom-0 right-0 lg:-right-[19.4%] flex">
+                <div class="w-[19.4%] absolute bottom-0 right-0 desktop:-right-[19.4%] flex">
                     <button
-                        class="w-6/12 flex py-4 lg:py-7 justify-center bg-black hover:bg-veryDarkGrey cursor-pointer"
+                        class="w-6/12 flex py-4 lg:py-5 justify-center bg-black hover:bg-veryDarkGrey cursor-pointer"
                         onclick="previous()"
                         >
                         <img 
@@ -68,7 +68,7 @@
                         >
                     </button>
                     <button 
-                        class="w-6/12 flex py-4 lg:py-7 justify-center bg-black hover:bg-veryDarkGrey cursor-pointer"
+                        class="w-6/12 flex py-4 lg:py-5 justify-center bg-black hover:bg-veryDarkGrey cursor-pointer"
                         onclick="next()"
                     >
                         <img 
@@ -79,8 +79,8 @@
                     </button>
                 </div>
             </div>
-            <div class="lg:w-5/12 flex flex-col justify-center gap-4 px-8 py-10 lg:py-0 lg:px-[6%] lg:pb-2">
-                <h1 class="text-3xl lg:text-[2.6rem] leading-7 font-bold lg:leading-10" id="cta-heading">
+            <div class="desktop:w-5/12 flex flex-col justify-center gap-4 px-8 py-10 desktop:py-0 desktop:px-[6%] desktop:pb-2">
+                <h1 class="text-3xl desktop:text-[2.6rem] leading-7 font-bold desktop:leading-10" id="cta-heading">
                     Discover innovative ways to decorate
                 </h1>
                 <p class="text-[15px] text-veryDarkGrey font-medium" id="cta-paragraph">
@@ -102,7 +102,7 @@
         </div>
         <div class="flex flex-col lg:flex-row">
             <div class="w-full lg:w-[29.1%]">
-                <img src="/images/image-about-dark.jpg" alt="about dark">
+                <img src="/images/image-about-dark.jpg" alt="about dark" class="w-full">
             </div>
             <div class="lg:w-[40.5%] flex flex-col justify-center gap-3 px-8 py-10 lg:px-10 lg:py-0">
                 <h2 class="text-[15px] font-bold tracking-[0.35rem]">
@@ -116,7 +116,7 @@
                 </p>
             </div>
             <div class="lg:w-[30.4%]">
-                <img src="/images/image-about-light.jpg" alt="">
+                <img src="/images/image-about-light.jpg" alt="" class="w-full">
             </div>
         </div>
     </main>
