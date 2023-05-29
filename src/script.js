@@ -1,15 +1,32 @@
+let width = window.innerWidth;
+
 const heroImg = document.getElementById("hero-img");
 const heading = document.getElementById("cta-heading");
 const paragraph = document.getElementById("cta-paragraph");
+const body = document.querySelector("body");
+const mobileNav = document.getElementById("mobile-nav");
+const main = document.querySelector("body");
+
+
+if(width < 640){
+    heroImg.src = "/images/mobile-image-hero-1.jpg";
+}
+
+const setWidth = () => {
+    width = window.innerWidth;
+}
+
+window.addEventListener("resize", setWidth);
 
 let count = 0;
 const length = 3;
+
 
 const next = () => {
     count++;
 
     const index = count % length;
-    heroImg.src = heroImages[index];
+    heroImg.src = (width>640) ? desktopHeroImages[index] : mobileHeroImages[index];
     heading.textContent = headingTexts[index];
     paragraph.textContent = paragraphTexts[index];
 }
@@ -22,15 +39,32 @@ const previous = () => {
     }
 
     const index = count % length;
-    heroImg.src = heroImages[index];
+    heroImg.src = (width>640) ? desktopHeroImages[index] : mobileHeroImages[index];
     heading.textContent = headingTexts[index];
     paragraph.textContent = paragraphTexts[index];
 }
 
-const heroImages = [
+
+const openNav = () => {
+    // body.style.overflowY = "hidden";
+    mobileNav.classList.remove("hidden");
+}
+
+const closeNav = () => {
+    // body.style.overflowY = "auto";
+    mobileNav.classList.add("hidden");
+}
+
+const desktopHeroImages = [
     "/images/desktop-image-hero-1.jpg",
     "/images/desktop-image-hero-2.jpg",
     "/images/desktop-image-hero-3.jpg"
+]
+
+const mobileHeroImages = [
+    "/images/mobile-image-hero-1.jpg",
+    "/images/mobile-image-hero-2.jpg",
+    "/images/mobile-image-hero-3.jpg"
 ]
 
 const headingTexts = [
@@ -44,17 +78,3 @@ const paragraphTexts = [
     "With stores all over the world, it's easy for you to find furniture for your home or place of business. Locally, we’re in most major cities throughout the country. Find the branch nearest you using our store locator. Any questions? Don't hesitate to contact us today.",
     "Our modern furniture store provide a high level of quality. Our company has invested in advanced technology to ensure that every product is made as perfect and as consistent as possible. With three decades of experience in this industry, we understand what customers want for their home and office."
 ]
-
-const body = document.querySelector("body");
-const mobileNav = document.getElementById("mobile-nav");
-const main = document.querySelector("body");
-
-const openNav = () => {
-    // body.style.overflowY = "hidden";
-    mobileNav.classList.remove("hidden");
-}
-
-const closeNav = () => {
-    // body.style.overflowY = "auto";
-    mobileNav.classList.add("hidden");
-}
