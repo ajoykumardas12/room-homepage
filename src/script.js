@@ -27,7 +27,6 @@ const setWidth = () => {
     // update width function with 300ms debounce
     resizeTimeout = setTimeout(() => {
         width = window.innerWidth;
-        console.log(width);
         heroImg.src = (width < 640) ? (mobileHeroImages[count]) : desktopHeroImages[count];
     }, 300);
 }
